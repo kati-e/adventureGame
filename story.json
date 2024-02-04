@@ -126,7 +126,7 @@
       "id": 4,
       "scene": "The Woods",
       "sceneImage": "./assets/woods.jpg",
-      "scenarioText": "Never try to fight a puppy. The puppy calls its other animal friends to attack you, and you lose the fight. RIP.",
+      "scenarioText": "Never try to fight a puppy. The puppy calls its other animal friends to attack you, and you lose the fight.",
       "options": [
         {
           "optionText": "Try Again",
@@ -193,7 +193,7 @@
       "id": 7,
       "scene": "The Cliff",
       "sceneImage": "./assets/cliff.jpg",
-      "scenarioText": "That was a bad decision. The cliff was much higher than you expected, and the water was much stronger. RIP.",
+      "scenarioText": "That was a bad decision. The cliff was much higher than you expected, and the water was much stronger.",
       "options": [
         {
           "optionText": "Try Again",
@@ -225,7 +225,7 @@
       "id": 9,
       "scene": "The Desert",
       "sceneImage": "./assets/desert.jpg",
-      "scenarioText": "You keep on walking, get really dehydrated and eventually pass out. RIP.",
+      "scenarioText": "You keep on walking, get really dehydrated and eventually pass out.",
       "options": [
         {
           "optionText": "Try Again",

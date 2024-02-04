@@ -5,7 +5,7 @@ const scenarioImage = document.getElementById("scene-image");
 const scenarioText = document.getElementById("scenario-text");
 const optionButtonContainer = document.getElementById("board-options");
 
-let state = { role: null, items: [], status: null };
+let state = { role: null, items: [], status: "alive" };
 
 runScenarios();
 
@@ -43,10 +43,10 @@ function showScenario(scenario) {
   scenarioScene.innerText = scenario.scene;
   scenarioImage.style.backgroundImage = `url('${scenario.sceneImage}')`;
   scenarioText.innerText = scenario.scenarioText;
-  if (state.status !== "dead") {
-    currentRole.innerText = `Role: ${state.role ?? "Traveller"}`;
+  if (state.status === "alive") {
+    currentRole.innerText = state.role ? `Role: ${state.role}` : "Lost";
   } else {
-    currentRole.innerHTML = `Dead`;
+    currentRole.innerHTML = `Fail`;
   }
   scenario.options.forEach((option) => {
     let buttonClasses = "";

@@ -75,7 +75,8 @@ button {
   background-color: var(--dark, black);
 }
 
-.tagline {
+.tagline,
+.version {
   color: var(--light, white);
 }
 
