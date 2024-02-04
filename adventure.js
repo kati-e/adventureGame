@@ -98,7 +98,7 @@ function selectOption(option) {
 
 async function fetchData() {
   try {
-    const response = await fetch("story.json");
+    const response = await fetch("./story.json");
     if (!response.ok) {
       throw new Error("It seems there was an error. So sad.");
     }

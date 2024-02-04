@@ -76,9 +76,9 @@
             "type": "treasure",
             "name": "Flower"
           },
-          "newRole": null,
+          "newRole": "Dead",
           "end": false,
-          "nextScenario": 3
+          "nextScenario": 10
         },
         {
           "optionText": "Fight the Puppy",
@@ -236,6 +236,22 @@
           "nextScenario": 1
         }
       ]
-    }
+    },
+    {
+        "id": 10,
+        "scene": "The Woods",
+        "sceneImage": "./assets/woods.jpg",
+        "scenarioText": "You water the flowers. They are so pretty and you lose track of time. Suddenly you notice the flowers are actually a group of fairies. They attack you for pouring water all over them.",
+        "options": [
+          {
+            "optionText": "Try Again",
+            "requires": null,
+            "pickupItem": null,
+            "newRole": null,
+            "end": true,
+            "nextScenario": 1
+          }
+        ]
+      }
   ]
 }
