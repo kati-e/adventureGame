@@ -1,0 +1,241 @@
+{
+  "scenarios": [
+    {
+      "id": 1,
+      "scene": "The Woods",
+      "sceneImage": "./assets/woods.jpg",
+      "scenarioText": "You wake up and find yourself in the woods. How did you get here? You decide to look for anything in the surrounding area to use to protect yourself.",
+      "options": [
+        {
+          "optionText": "Pick up the Axe",
+          "requires": null,
+          "pickupItem": {
+            "type": "weapon",
+            "name": "Axe"
+          },
+          "newRole": "Lumberjack",
+          "end": false,
+          "nextScenario": 2
+        },
+        {
+          "optionText": "Pick up the Watering Can",
+          "requires": null,
+          "pickupItem": {
+            "type": "tool",
+            "name": "Watering Can"
+          },
+          "newRole": "Casual Farmer",
+          "end": false,
+          "nextScenario": 2
+        },
+        {
+          "optionText": "Pick up the Rusty Knife",
+          "requires": null,
+          "pickupItem": {
+            "type": "weapon",
+            "name": "Rusty Knife"
+          },
+          "newRole": "Swordsman",
+          "end": false,
+          "nextScenario": 2
+        },
+        {
+          "optionText": "Befriend the Puppy",
+          "requires": null,
+          "pickupItem": {
+            "type": "pet",
+            "name": "Puppy"
+          },
+          "newRole": "Animal Lover",
+          "end": false,
+          "nextScenario": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "scene": "The Woods",
+      "sceneImage": "./assets/woods.jpg",
+      "scenarioText": "You are still in the forest, what now?",
+      "options": [
+        {
+          "optionText": "Cut trees",
+          "requires": ["Axe"],
+          "pickupItem": {
+            "type": "material",
+            "name": "Wood"
+          },
+          "newRole": null,
+          "end": false,
+          "nextScenario": 3
+        },
+        {
+          "optionText": "Water the Flowers",
+          "requires": ["Watering Can"],
+          "pickupItem": {
+            "type": "treasure",
+            "name": "Flower"
+          },
+          "newRole": null,
+          "end": false,
+          "nextScenario": 3
+        },
+        {
+          "optionText": "Fight the Puppy",
+          "requires": ["Axe", "Rusty Knife"],
+          "pickupItem": null,
+          "newRole": "Dead",
+          "end": false,
+          "nextScenario": 4
+        },
+        {
+          "optionText": "Leave the forest",
+          "requires": null,
+          "pickupItem": null,
+          "newRole": null,
+          "end": false,
+          "nextScenario": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "scene": "The Clearing",
+      "sceneImage": "./assets/clearing.jpg",
+      "scenarioText": "You manage to make it out of the woods alive, and you have come across a clearing with a long road. Both ways look equally omonous. Which way do you choose?",
+      "options": [
+        {
+          "optionText": "Go towards the mist",
+          "requires": null,
+          "pickupItem": null,
+          "newRole": null,
+          "end": false,
+          "nextScenario": 5
+        },
+        {
+          "optionText": "Go towards the sun",
+          "requires": null,
+          "pickupItem": null,
+          "newRole": null,
+          "end": false,
+          "nextScenario": 6
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "scene": "The Woods",
+      "sceneImage": "./assets/woods.jpg",
+      "scenarioText": "Never try to fight a puppy. The puppy calls its other animal friends to attack you, and you lose the fight. RIP.",
+      "options": [
+        {
+          "optionText": "Try Again",
+          "requires": null,
+          "pickupItem": null,
+          "newRole": null,
+          "end": true,
+          "nextScenario": 1
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "scene": "The Cliff",
+      "sceneImage": "./assets/cliff.jpg",
+      "scenarioText": "You walk through the mist and see that you have come to a dead end. The road is cut off by a massive cliff face with raging waters below. What do you do?",
+      "options": [
+        {
+          "optionText": "Jump!",
+          "requires": null,
+          "pickupItem": null,
+          "newRole": "Dead",
+          "end": false,
+          "nextScenario": 7
+        },
+        {
+          "optionText": "Build a Raft",
+          "requires": ["Wood"],
+          "pickupItem": {
+            "type": "tool",
+            "name": "Raft"
+          },
+          "newRole": "Pirate",
+          "end": false,
+          "nextScenario": 8
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "scene": "The Desert",
+      "sceneImage": "./assets/desert.jpg",
+      "scenarioText": "You have followed the road for hours now. You start to notice more and more sand, and less signs of life. You are in a desert it seems. What is your next move?",
+      "options": [
+        {
+          "optionText": "Go back towards the mist",
+          "requires": null,
+          "pickupItem": null,
+          "newRole": null,
+          "end": false,
+          "nextScenario": 5
+        },
+        {
+          "optionText": "Keep on walking",
+          "requires": null,
+          "pickupItem": null,
+          "newRole": "Dead",
+          "end": false,
+          "nextScenario": 9
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "scene": "The Cliff",
+      "sceneImage": "./assets/cliff.jpg",
+      "scenarioText": "That was a bad decision. The cliff was much higher than you expected, and the water was much stronger. RIP.",
+      "options": [
+        {
+          "optionText": "Try Again",
+          "requires": null,
+          "pickupItem": null,
+          "newRole": null,
+          "end": true,
+          "nextScenario": 1
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "scene": "The Sea",
+      "sceneImage": "./assets/sea.jpg",
+      "scenarioText": "You assemble a raft from the wood you have collected. You peacefully sail down the face of the cliff and out to sea. It's a pirate's life for you, yo ho!",
+      "options": [
+        {
+          "optionText": "Play Again?",
+          "requires": null,
+          "pickupItem": null,
+          "newRole": null,
+          "end": true,
+          "nextScenario": 1
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "scene": "The Desert",
+      "sceneImage": "./assets/desert.jpg",
+      "scenarioText": "You keep on walking, get really dehydrated and eventually pass out. RIP.",
+      "options": [
+        {
+          "optionText": "Try Again",
+          "requires": null,
+          "pickupItem": null,
+          "newRole": null,
+          "end": true,
+          "nextScenario": 1
+        }
+      ]
+    }
+  ]
+}
